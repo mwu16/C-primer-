@@ -9,7 +9,7 @@ int main(){
     while (std::cin>>word){
             input.push_back(word);
             std::string n;
-            std::cout << "Have you done?" << std::endl;
+            std::cout << "Continue?" << std::endl;
             std::cin >> n;
             if (n == "y" || n=="Y") {
                 std::cout << "Enter one word"<< std::endl;
@@ -17,5 +17,9 @@ int main(){
                 break;
             }
     }
+    for(auto c: input){
+        std::cout<< c << " ";
+    }
+    std::cout<<std::endl;
     return 0;
 }
