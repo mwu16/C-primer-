@@ -1,9 +1,9 @@
 #include <iostream>
 
 int main(){
-
-    unsigned array[10];
-    for (int index=0; index < 10; ++index) {
+    const int sz=10;
+    unsigned array[sz];
+    for (int index=0; index < sz; ++index) {
         array[index]=index;
         std::cout << array[index]<< " ";
     }
