@@ -70,12 +70,12 @@ int main() {
     auto it1 = vInt1.begin();
     auto it2= vInt2.begin();
     while(it1 != vInt1.end() && it2 !=vInt2.end()) {
-        if (*p!=*p2) {
+        if (*it1!=*it2) {
             std::cout << " your input is not the same as the generated values" << std::endl;
             return -1;
         } 
-        p++;
-        p2++;
+        it2++;
+        it1++;
     }
     return 0; 
 }
