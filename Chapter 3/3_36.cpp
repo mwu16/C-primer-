@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <ctime>
 
 int main() {
     const int sz=10;
@@ -13,7 +14,7 @@ int main() {
     std::cout << "Enter 10 values" << std::endl;
     int iPut;
     for (int i=0; i<sz; i++) {
-        std::cin >> iPut;
+        if(std::cin >> iPut)
         b[i]=iPut;
     }
 
@@ -41,7 +42,6 @@ int main() {
 
     std::cout << "your input is the same as the generated values";
 
-
     std::vector<int> vInt1(sz);
     std::vector<int> vInt2(sz);
 
@@ -52,7 +52,7 @@ int main() {
     std::cout << "Enter 10 values" << std::endl;
 
     for (decltype(vInt2.size()) i=0; i < vInt2.size(); ++i) {
-        std::cin >> iPut;
+        if (std::cin >> iPut)
         vInt2.push_back(iPut);
     }
 
@@ -68,7 +68,7 @@ int main() {
     std::cout << std::endl;
 
     auto it1 = vInt1.begin();
-    auto it2= vInt2.begin();
+    auto it2 = vInt2.begin();
     while(it1 != vInt1.end() && it2 !=vInt2.end()) {
         if (*it1!=*it2) {
             std::cout << " your input is not the same as the generated values" << std::endl;
