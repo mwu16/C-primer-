@@ -5,14 +5,16 @@
 int main() {
     const int sz=10;
     std::vector<int> ivec;
-    int list1[sz];
     std::srand ((unsigned) time (NULL));
-    for (int i=0; i< sz; i++) {
-        ivec.push_back(std::rand()/100);
+    for (int i=0; i!= sz; i++) {
+        ivec.push_back(std::rand()%100); //int between 0 to 100;
     }
-    for (int i=0; i<sz; i++){
-        list1[i]=ivec[i];
-        std::cout << list1[i] <<std::endl;
+    auto it = ivec.cbegin();
+    int list1[ivec.size()];
+    for (auto &e: list1){
+        e=*it;
+        std::cout << e <<std::endl;
+        it++;
     }
 
     std::cout<<std::endl;

@@ -7,7 +7,7 @@ int main() {
     int list1[10];
     std::srand((unsigned) time(NULL));
     for (int i=0; i<sz; i++){
-        list1[i]=std::rand()/100; //int 0 to 10
+        list1[i]=std::rand()%100; //int 0 to 100
     }
     std::vector<int> ivec(std::begin(list1), std::end(list1));
     for (decltype(ivec.size()) i=0; i<ivec.size(); i++){

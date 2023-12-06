@@ -1,11 +1,9 @@
 #include <iostream>
 #include <cstring>
 int main() {
-    const int sz=80;
-    char str1[sz], str2[sz];
-    char longstr[sz*2];
-    std::cout<< "Enter two words" << std::endl;
-    std::cin>> str1 >> str2;
+    char str1[]="Welcome to Sweden";
+    char str2[]="Welcome to China";
+    char longstr[strlen(str1) + strlen(str2) - 1];
     strcpy(longstr, str1);
     strcat(longstr, " ");
     strcat(longstr, str2);
